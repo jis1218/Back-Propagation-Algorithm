@@ -6,11 +6,11 @@ public class Main {
 		double[][] sample = {{0, 0, 1}, {0, 1, 1}, {1, 0, 1}, {1, 1, 1}};
 		double[][] weight1 = {{0.3, 0.2, 0.1}, {0.5, 0.2, 0.6}, {0.8, 0.2, 0.4}, {0.7, 0.4, 0.2}, {0.5, 0.5, 0.5, 0.5}};
 		//double[] weight2 = {0.5, 0.5, 0.5, 0.5};
-		double[] target = {0, 1, 1, 0};
+		double[] target = {0.2, 0.3, 1, 0};
 		
 		BackPropagation backPropagation = new BackPropagation();
 		
-		for(int m=0; m<100000; m++){
+		for(int m=0; m<1000000; m++){
 			for(int i=0; i<sample.length; i++){
 				weight1 = backPropagation.doBackPropa(sample[i], weight1, target[i]);
 			}
